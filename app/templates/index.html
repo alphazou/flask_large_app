@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}首页{% endblock %}
+
+{% block page_content %}
+<h1>
+你好，
+{% if current_user.is_authenticated %}
+    {% if current_user.nickname %}
+        {{ current_user.nickname }}
+    {% else %}
+        {{ current_user.username }}
+    {% endif %}
+
+{% else %}
+    游客
+{% endif %}!
+</h1>
+
+<p>{{ moment(current_time).format('LLL') }}</p>
+<p>{{ moment(current_time).fromNow(refresh=True) }}</p>
+
+{% endblock %}

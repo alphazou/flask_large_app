@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% import 'bootstrap/wtf.html' as wtf %}
+{% block title %} 登录{% endblock %}
+{% block page_content %}
+    <div class="page-header">
+        <h1>登  录</h1>
+    </div>
+    <div class="col-md-4">
+    {{ form.hidden_tag() }}
+    {{ wtf.quick_form(form) }}
+    </div>
+{% endblock %}
