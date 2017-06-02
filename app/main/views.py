@@ -4,7 +4,6 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import login_required
 
 from . import main
-from .forms import LoginForm, RegisterForm
 from ..models import User
 from app import db
 

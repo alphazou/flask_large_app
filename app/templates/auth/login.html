@@ -4,9 +4,14 @@
 {% block page_content %}
     <div class="page-header">
         <h1>登  录</h1>
+         <p>
+        新用户？
+        <a href="{{ url_for('auth.register') }}">点击注册</a>
+        </p>
     </div>
     <div class="col-md-4">
     {{ form.hidden_tag() }}
     {{ wtf.quick_form(form) }}
     </div>
+
 {% endblock %}

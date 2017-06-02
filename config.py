@@ -8,12 +8,12 @@ class Config:
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'QAZwsx147258!@#'
     SQLALCHEMY_COMMIT_ON_TEARDOWN = True
     SQLALCHEMY_TRACK_MODIFICATIONS = True
-    FLASKY_MAIL_SUBJECT_PREFIX = '[Flasky]'     # 电子邮件前缀
-    FLASKY_MAIL_SENDER = 'Flasky Admin <nx_xiaozi@163.com>'
+    FLASKY_MAIL_SUBJECT_PREFIX = '[胜创数联]'     # 电子邮件前缀
+    FLASKY_MAIL_SENDER = '管理员 <alphazou@126.com>'
     FLASKY_ADMIN = os.environ.get('FLASKY_ADMIN')
 
-    MAIL_SERVER = 'smtp.163.com'
-    MAIL_PORT = 465
+    MAIL_SERVER = 'smtp.126.com'
+    MAIL_PORT = 25
     MAIL_USE_TLS = True
     MAIL_USERNAME = os.environ.get('MAIL_USERNAME')
     MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
@@ -47,5 +47,3 @@ config = {
     'production': ProductionConfig,
     'default': DevelopmentConfig
 }
-
-

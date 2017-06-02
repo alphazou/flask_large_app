@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}胜创数联 - 确认你的账户{% endblock %}
+
+{% block page_content %}
+<div class="page-header">
+    <h1>
+        你好, {{ current_user.username }}!
+    </h1>
+    <h3>您还没有确认您的帐户。</h3>
+    <p>
+        要访问此网站， 您需要确认您的账户。
+       检查您的收件箱，您应该收到一封电子邮件与确认链接。
+    </p>
+    <p>
+        需要重新发送一份确认电子邮件吗？
+        <a href="{{ url_for('auth.resend_confirmation') }}">点击这里</a>
+    </p>
+</div>
+{% endblock %}

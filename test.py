@@ -1,10 +1,3 @@
-from app.models import User, Role
-
-class A:
-    pass
-
-class B:
-    pass
-
-d = dict(User=User,Role=Role)
-print(d)
+import os
+print(os.environ.get('MAIL_USERNAME'))
+print(os.environ.get('TEST_DATABASE_URL'))
